@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CorrelatorSharp.WebApi", "CorrelatorSharp.WebApi\CorrelatorSharp.WebApi.csproj", "{354C80A6-B023-4C69-B745-CDA6BAF8510E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CorrelatorSharp.WebApi.Sample", "CorrelatorSharp.WebApi.Sample\CorrelatorSharp.WebApi.Sample.csproj", "{E154B601-F9E0-437B-A3D1-3E63A5F6704E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4E3762CD-2D68-412B-BF2A-E262944CB6E4}"
+	ProjectSection(SolutionItems) = preProject
+		appveyor.yml = appveyor.yml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{354C80A6-B023-4C69-B745-CDA6BAF8510E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{354C80A6-B023-4C69-B745-CDA6BAF8510E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{354C80A6-B023-4C69-B745-CDA6BAF8510E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{354C80A6-B023-4C69-B745-CDA6BAF8510E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E154B601-F9E0-437B-A3D1-3E63A5F6704E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E154B601-F9E0-437B-A3D1-3E63A5F6704E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E154B601-F9E0-437B-A3D1-3E63A5F6704E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E154B601-F9E0-437B-A3D1-3E63A5F6704E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
