@@ -1,5 +1,6 @@
 environment:
   release_version: '1.1.0'
+  release_assembly_version: '1.1.0.0'
   
 version: '$(release_version)+{build}'
 os: Visual Studio 2015
@@ -8,8 +9,8 @@ platform: Any CPU
 assembly_info:
   patch: true
   file: '**\AssemblyInfo.*'
-  assembly_version: '$(release_version).0'
-  assembly_file_version: '$(release_version).0'
+  assembly_version: '$(release_assembly_version)'
+  assembly_file_version: '$(release_assembly_version)'
   assembly_informational_version: '$(release_version)'
 before_build:
 - cmd: >-
