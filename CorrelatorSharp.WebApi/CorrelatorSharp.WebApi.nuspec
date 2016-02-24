@@ -6,7 +6,7 @@
     <authors>Ivan Zlatev</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>CorrelatorSharp</description>
-    <projectUrl>https://github.com/ivanz/CorrelatorSharp</projectUrl>
+    <projectUrl>https://github.com/CorrelatorSharp</projectUrl>
     <dependencies>
       <dependency id="CorrelatorSharp" version="[1.1.0,2)" />
       <dependency id="Microsoft.AspNet.WebApi.Client" version="[5.2,6)" />
