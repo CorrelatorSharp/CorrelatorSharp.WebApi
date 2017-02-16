@@ -12,16 +12,15 @@ namespace CorrelatorSharp.WebApi
 {
     public class CorrelationIdActionFilter : IActionFilter
     {
-
         private static readonly string CORRELATION_ID_HTTP_HEADER = Headers.CorrelationId;
 
         public bool AllowMultiple {
             get { return false; }
         }
 
-        public Task<HttpResponseMessage> ExecuteActionFilterAsync(HttpActionContext actionContext,
-                                                                  CancellationToken cancellationToken,
-                                                                  Func<Task<HttpResponseMessage>> continuation)
+        public async Task<HttpResponseMessage> ExecuteActionFilterAsync(HttpActionContext actionContext,
+                                                                        CancellationToken cancellationToken,
+                                                                        Func<Task<HttpResponseMessage>> continuation)
         {
             string correlationId = null;
 
@@ -36,12 +35,13 @@ namespace CorrelatorSharp.WebApi
 
             ActivityScope scope = new ActivityScope(null, correlationId);
 
-            return continuation().ContinueWith(task => {
-                task.Result.Headers.Add(CORRELATION_ID_HTTP_HEADER, scope.Id);
-                scope.Dispose();
+            var actionResult = await continuation();
 
-                return task.Result;
-            });
+            actionResult.Headers.Add(CORRELATION_ID_HTTP_HEADER, scope.Id);
+
+            scope.Dispose();
+
+            return actionResult;
         }
     }
 }
