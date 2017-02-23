@@ -31,6 +31,9 @@ namespace CorrelatorSharp.WebApi
                 correlationId = correlationHeaderValues.FirstOrDefault(value => !String.IsNullOrWhiteSpace(value));
 
             if (String.IsNullOrWhiteSpace(correlationId))
+                correlationId = actionContext.Request.GetCorrelationId().ToString();
+
+            if (String.IsNullOrWhiteSpace(correlationId))
                 correlationId = Guid.NewGuid().ToString();
 
             ActivityScope scope = new ActivityScope(null, correlationId);
