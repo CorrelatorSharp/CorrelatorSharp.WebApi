@@ -4,11 +4,8 @@ namespace CorrelatorSharp.WebApi.Sample.Controllers
 {
     public class TestController : ApiController
     {
-
-        public IHttpActionResult Test()
-        {
-            return Json(ActivityScope.Current.Id);
-        }
-           
+        [HttpGet]
+        public IHttpActionResult Test() 
+            => Json(ActivityScope.Current);
     }
 }
